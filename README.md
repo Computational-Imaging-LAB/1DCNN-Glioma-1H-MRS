@@ -36,22 +36,29 @@
 ```
 # Proposed Model Architecture
 #
-
+****
+***
 ![Open Source? Yes!](https://github.com/Computational-Imaging-LAB/1DCNN-Glioma-1H-MRS/blob/master/images/image5.jpeg?raw=true)
 
 # Results of the study
 #
+****
+***
 ![Open Source? Yes!](https://github.com/Computational-Imaging-LAB/1DCNN-Glioma-1H-MRS/blob/master/images/image3.jpeg?raw=true)
 
 # Loss plots of the models.
 #
+****
+***
 ![Open Source? Yes!](https://github.com/Computational-Imaging-LAB/1DCNN-Glioma-1H-MRS/blob/master/images/image1.jpeg?raw=true)
 
 
 # HELP AND SUPPORT
-*If there will be any bug or issue that you face please dont hesitate to ask. abdullah.bas@boun.edu.tr
+****
+***
+_If there will be any bug or issue that you face please dont hesitate to ask. abdullah.bas@boun.edu.tr_
 
-*Ulu çınarlar fırtınalı diyarlarda yetişir. (Great plane trees grow in stormy lands)--Cemil Meriç (Turkish author)
+_Ulu çınarlar fırtınalı diyarlarda yetişir. (Great plane trees grow in stormy lands)--Cemil Meriç (Turkish author)_
 
 This study has been accepted to ISMRM Canada 15-20 May 2021.
 
