@@ -34,25 +34,26 @@
 └── trklearn.py
 
 ```
-# Proposed Model Architecture
 #
+# Proposed Model Architecture
+
 ****
 ***
 ![Open Source? Yes!](https://github.com/Computational-Imaging-LAB/1DCNN-Glioma-1H-MRS/blob/master/images/image5.jpeg?raw=true)
-
-# Results of the study
 #
+# Results of the study
+
 ****
 ***
 ![Open Source? Yes!](https://github.com/Computational-Imaging-LAB/1DCNN-Glioma-1H-MRS/blob/master/images/image3.jpeg?raw=true)
-
-# Loss plots of the models.
 #
+# Loss plots of the models.
+
 ****
 ***
 ![Open Source? Yes!](https://github.com/Computational-Imaging-LAB/1DCNN-Glioma-1H-MRS/blob/master/images/image1.jpeg?raw=true)
 
-
+#
 # HELP AND SUPPORT
 ****
 ***
