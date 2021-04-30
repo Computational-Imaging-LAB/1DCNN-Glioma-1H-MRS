@@ -10,7 +10,7 @@
 
 
 # 1D-CNN for detection IDH and TERTp mutations in gliomas using MRS data.
-* This tree is the tree of required data folders for this project. Other folders are required for documentation.
+* Tree of the configuration can be shown as the following.
 
 ```bash
 ├── conf.py
