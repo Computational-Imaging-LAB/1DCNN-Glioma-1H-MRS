@@ -12,7 +12,8 @@ Istanbul / Uskudar
 import numpy as np
 
 import pytorch_lightning as pl
-
+import pickle
+import os
 import torch
 import torchvision
 from torch.utils.data import Dataset, DataLoader
@@ -58,7 +59,18 @@ class dataset(Dataset):
                 self.excarr=smoother(self.excarr)
                 self.excarr,self.scale=scaler(self.excarr)
                 self.excarr,self.transformater=transformation(self.excarr)
-            
+                if not os.path.isdir('preprocess'):
+                    os.mkdir('preprocess')
+                pickle.dump(self.scale, open('preprocess/scaler.pkl', 'wb'))
+                pickle.dump(self.transformater, open('preprocess/transformater.pkl', 'wb'))
+                
+        elif phase=='valid':
+            self.excarr=normalizer(self.excarr)
+            self.excarr=smoother(self.excarr)
+            scaler=pickle.load('preprocess/scaler.pkl')
+            transformater=pickle.load('preprocess/transformater.pkl')
+            self.excarr=scaler(self.excarr)
+            self.excarr=transformater(self.excarr)
             
     def __len__(self):
         return len(self.excarr)
