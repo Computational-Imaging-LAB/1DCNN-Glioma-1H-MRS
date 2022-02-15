@@ -19,7 +19,7 @@ import torchvision
 from torch.utils.data import Dataset, DataLoader
 from preprocess import transformation,scaler,normalizer,smoother
 import pandas as pd
-
+from preprocess import scaler as scl
 from scipy.fft import fft,ifft 
 class dataset(Dataset):
     
@@ -55,9 +55,9 @@ class dataset(Dataset):
             self.excarr=np.array(self.exc)
             
             if self.preprocess:
-                self.excarr=normalizer(self.excarr)
+                #self.excarr=normalizer(self.excarr)
                 self.excarr=smoother(self.excarr)
-                self.excarr,self.scale=scaler(self.excarr)
+                self.excarr,self.scale=scl(self.excarr)
                 self.excarr,self.transformater=transformation(self.excarr)
                 if not os.path.isdir('preprocess'):
                     os.mkdir('preprocess')
@@ -65,10 +65,10 @@ class dataset(Dataset):
                 pickle.dump(self.transformater, open('preprocess/transformater.pkl', 'wb'))
                 
         elif phase=='valid':
-            self.excarr=normalizer(self.excarr)
+            #self.excarr=normalizer(self.excarr)
             self.excarr=smoother(self.excarr)
-            scaler=pickle.load('preprocess/scaler.pkl')
-            transformater=pickle.load('preprocess/transformater.pkl')
+            scaler=np.load('preprocess/scaler.pkl',allow_pickle=True)
+            transformater=np.load('preprocess/transformater.pkl',allow_pickle=True)
             self.excarr=scaler(self.excarr)
             self.excarr=transformater(self.excarr)
             
